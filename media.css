@@ -1,0 +1,44 @@
+/* --- AJUSTES PARA CELULAR --- */
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px; /* Reduz o respiro lateral no mobile */
+    }
+
+    h1 {
+        font-size: 28px; /* Título menor para não quebrar em 3 linhas */
+        text-align: center;
+    }
+
+    /* O pulo do gato: muda de lado a lado para um embaixo do outro */
+    .resultado {
+        flex-direction: column; 
+        align-items: center;
+        gap: 30px; /* Espaço entre o bloco de código e o preview */
+    }
+
+    /* Ajusta os containers internos para ocuparem a largura total disponível */
+    .resultado div:nth-child(2) {
+        order: -1;
+        width: 100%;
+    }
+
+    .resultado div:nth-child(1) {
+        width: 100%;
+    }
+
+    .bloco-codigo, 
+    .resultado-codigo {
+        width: 100%; /* Ocupa 100% da largura do pai */
+        max-width: 100%; /* Remove a trava de 450px que estava no seu CSS original */
+    }
+
+    .resultado-codigo {
+        height: 350px; /* Altura fixa para o iframe não sumir */
+    }
+
+    textarea, 
+    button {
+        max-width: 100%; /* Garante que a entrada de texto não escape da tela */
+    }
+}
